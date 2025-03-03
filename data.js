@@ -50,7 +50,6 @@ const dataList = {
             answer: "Ich habe Hunger.",
             english: "I am hungry."
         },
-        // Add 90 more verb scenarios...
         {
             scenario: "You’re asking someone to open the window. What do you say?",
             answer: "Kannst du bitte das Fenster öffnen?",
@@ -100,6 +99,361 @@ const dataList = {
             scenario: "You’re telling someone you’re going to the movies. What do you say?",
             answer: "Ich gehe ins Kino.",
             english: "I am going to the movies."
+        },
+        {
+            scenario: "You’re asking someone to clean the room. What do you say?",
+            answer: "Kannst du bitte das Zimmer sauber machen?",
+            english: "Can you please clean the room?"
+        },
+        {
+            scenario: "You’re telling someone you’re going to the beach. What do you say?",
+            answer: "Ich gehe zum Strand.",
+            english: "I am going to the beach."
+        },
+        {
+            scenario: "You’re asking someone to cook dinner. What do you say?",
+            answer: "Kannst du bitte das Abendessen kochen?",
+            english: "Can you please cook dinner?"
+        },
+        {
+            scenario: "You’re telling someone you’re going to the library. What do you say?",
+            answer: "Ich gehe in die Bibliothek.",
+            english: "I am going to the library."
+        },
+        {
+            scenario: "You’re asking someone to take a photo. What do you say?",
+            answer: "Kannst du bitte ein Foto machen?",
+            english: "Can you please take a photo?"
+        },
+        {
+            scenario: "You’re telling someone you’re going to the museum. What do you say?",
+            answer: "Ich gehe ins Museum.",
+            english: "I am going to the museum."
+        },
+        {
+            scenario: "You’re asking someone to buy groceries. What do you say?",
+            answer: "Kannst du bitte Lebensmittel einkaufen?",
+            english: "Can you please buy groceries?"
+        },
+        {
+            scenario: "You’re telling someone you’re going to the zoo. What do you say?",
+            answer: "Ich gehe in den Zoo.",
+            english: "I am going to the zoo."
+        },
+        {
+            scenario: "You’re asking someone to water the plants. What do you say?",
+            answer: "Kannst du bitte die Pflanzen gießen?",
+            english: "Can you please water the plants?"
+        },
+        {
+            scenario: "You’re telling someone you’re going to the concert. What do you say?",
+            answer: "Ich gehe zum Konzert.",
+            english: "I am going to the concert."
+        },
+        {
+            scenario: "You’re asking someone to feed the dog. What do you say?",
+            answer: "Kannst du bitte den Hund füttern?",
+            english: "Can you please feed the dog?"
+        },
+        {
+            scenario: "You’re telling someone you’re going to the theater. What do you say?",
+            answer: "Ich gehe ins Theater.",
+            english: "I am going to the theater."
+        },
+        {
+            scenario: "You’re asking someone to wash the car. What do you say?",
+            answer: "Kannst du bitte das Auto waschen?",
+            english: "Can you please wash the car?"
+        },
+        {
+            scenario: "You’re telling someone you’re going to the pool. What do you say?",
+            answer: "Ich gehe zum Schwimmbad.",
+            english: "I am going to the pool."
+        },
+        {
+            scenario: "You’re asking someone to iron the clothes. What do you say?",
+            answer: "Kannst du bitte die Kleidung bügeln?",
+            english: "Can you please iron the clothes?"
+        },
+        {
+            scenario: "You’re telling someone you’re going to the mountains. What do you say?",
+            answer: "Ich gehe in die Berge.",
+            english: "I am going to the mountains."
+        },
+        {
+            scenario: "You’re asking someone to vacuum the floor. What do you say?",
+            answer: "Kannst du bitte den Boden staubsaugen?",
+            english: "Can you please vacuum the floor?"
+        },
+        {
+            scenario: "You’re telling someone you’re going to the countryside. What do you say?",
+            answer: "Ich gehe aufs Land.",
+            english: "I am going to the countryside."
+        },
+        {
+            scenario: "You’re asking someone to mow the lawn. What do you say?",
+            answer: "Kannst du bitte den Rasen mähen?",
+            english: "Can you please mow the lawn?"
+        },
+        {
+            scenario: "You’re telling someone you’re going to the city. What do you say?",
+            answer: "Ich gehe in die Stadt.",
+            english: "I am going to the city."
+        },
+        {
+            scenario: "You’re asking someone to fix the computer. What do you say?",
+            answer: "Kannst du bitte den Computer reparieren?",
+            english: "Can you please fix the computer?"
+        },
+        {
+            scenario: "You’re telling someone you’re going to the office. What do you say?",
+            answer: "Ich gehe ins Büro.",
+            english: "I am going to the office."
+        },
+        {
+            scenario: "You’re asking someone to paint the wall. What do you say?",
+            answer: "Kannst du bitte die Wand streichen?",
+            english: "Can you please paint the wall?"
+        },
+        {
+            scenario: "You’re telling someone you’re going to the hospital. What do you say?",
+            answer: "Ich gehe ins Krankenhaus.",
+            english: "I am going to the hospital."
+        },
+        {
+            scenario: "You’re asking someone to repair the bike. What do you say?",
+            answer: "Kannst du bitte das Fahrrad reparieren?",
+            english: "Can you please repair the bike?"
+        },
+        {
+            scenario: "You’re telling someone you’re going to the bank. What do you say?",
+            answer: "Ich gehe zur Bank.",
+            english: "I am going to the bank."
+        },
+        {
+            scenario: "You’re asking someone to clean the dishes. What do you say?",
+            answer: "Kannst du bitte das Geschirr spülen?",
+            english: "Can you please clean the dishes?"
+        },
+        {
+            scenario: "You’re telling someone you’re going to the post office. What do you say?",
+            answer: "Ich gehe zur Post.",
+            english: "I am going to the post office."
+        },
+        {
+            scenario: "You’re asking someone to fix the TV. What do you say?",
+            answer: "Kannst du bitte den Fernseher reparieren?",
+            english: "Can you please fix the TV?"
+        },
+        {
+            scenario: "You’re telling someone you’re going to the pharmacy. What do you say?",
+            answer: "Ich gehe zur Apotheke.",
+            english: "I am going to the pharmacy."
+        },
+        {
+            scenario: "You’re asking someone to organize the books. What do you say?",
+            answer: "Kannst du bitte die Bücher organisieren?",
+            english: "Can you please organize the books?"
+        },
+        {
+            scenario: "You’re telling someone you’re going to the supermarket. What do you say?",
+            answer: "Ich gehe zum Supermarkt.",
+            english: "I am going to the supermarket."
+        },
+        {
+            scenario: "You’re asking someone to fix the sink. What do you say?",
+            answer: "Kannst du bitte das Waschbecken reparieren?",
+            english: "Can you please fix the sink?"
+        },
+        {
+            scenario: "You’re telling someone you’re going to the bakery. What do you say?",
+            answer: "Ich gehe zur Bäckerei.",
+            english: "I am going to the bakery."
+        },
+        {
+            scenario: "You’re asking someone to clean the bathroom. What do you say?",
+            answer: "Kannst du bitte das Badezimmer putzen?",
+            english: "Can you please clean the bathroom?"
+        },
+        {
+            scenario: "You’re telling someone you’re going to the butcher. What do you say?",
+            answer: "Ich gehe zum Metzger.",
+            english: "I am going to the butcher."
+        },
+        {
+            scenario: "You’re asking someone to fix the roof. What do you say?",
+            answer: "Kannst du bitte das Dach reparieren?",
+            english: "Can you please fix the roof?"
+        },
+        {
+            scenario: "You’re telling someone you’re going to the florist. What do you say?",
+            answer: "Ich gehe zum Blumenladen.",
+            english: "I am going to the florist."
+        },
+        {
+            scenario: "You’re asking someone to clean the windows. What do you say?",
+            answer: "Kannst du bitte die Fenster putzen?",
+            english: "Can you please clean the windows?"
+        },
+        {
+            scenario: "You’re telling someone you’re going to the tailor. What do you say?",
+            answer: "Ich gehe zum Schneider.",
+            english: "I am going to the tailor."
+        },
+        {
+            scenario: "You’re asking someone to fix the fence. What do you say?",
+            answer: "Kannst du bitte den Zaun reparieren?",
+            english: "Can you please fix the fence?"
+        },
+        {
+            scenario: "You’re telling someone you’re going to the dentist. What do you say?",
+            answer: "Ich gehe zum Zahnarzt.",
+            english: "I am going to the dentist."
+        },
+        {
+            scenario: "You’re asking someone to clean the garage. What do you say?",
+            answer: "Kannst du bitte die Garage aufräumen?",
+            english: "Can you please clean the garage?"
+        },
+        {
+            scenario: "You’re telling someone you’re going to the optician. What do you say?",
+            answer: "Ich gehe zum Optiker.",
+            english: "I am going to the optician."
+        },
+        {
+            scenario: "You’re asking someone to fix the door. What do you say?",
+            answer: "Kannst du bitte die Tür reparieren?",
+            english: "Can you please fix the door?"
+        },
+        {
+            scenario: "You’re telling someone you’re going to the vet. What do you say?",
+            answer: "Ich gehe zum Tierarzt.",
+            english: "I am going to the vet."
+        },
+        {
+            scenario: "You’re asking someone to clean the attic. What do you say?",
+            answer: "Kannst du bitte den Dachboden aufräumen?",
+            english: "Can you please clean the attic?"
+        },
+        {
+            scenario: "You’re telling someone you’re going to the hairdresser. What do you say?",
+            answer: "Ich gehe zum Friseur.",
+            english: "I am going to the hairdresser."
+        },
+        {
+            scenario: "You’re asking someone to fix the gate. What do you say?",
+            answer: "Kannst du bitte das Tor reparieren?",
+            english: "Can you please fix the gate?"
+        },
+        {
+            scenario: "You’re telling someone you’re going to the mechanic. What do you say?",
+            answer: "Ich gehe zur Werkstatt.",
+            english: "I am going to the mechanic."
+        },
+        {
+            scenario: "You’re asking someone to clean the basement. What do you say?",
+            answer: "Kannst du bitte den Keller aufräumen?",
+            english: "Can you please clean the basement?"
+        },
+        {
+            scenario: "You’re telling someone you’re going to the jeweler. What do you say?",
+            answer: "Ich gehe zum Juwelier.",
+            english: "I am going to the jeweler."
+        },
+        {
+            scenario: "You’re asking someone to fix the stairs. What do you say?",
+            answer: "Kannst du bitte die Treppe reparieren?",
+            english: "Can you please fix the stairs?"
+        },
+        {
+            scenario: "You’re telling someone you’re going to the cobbler. What do you say?",
+            answer: "Ich gehe zum Schuster.",
+            english: "I am going to the cobbler."
+        },
+        {
+            scenario: "You’re asking someone to clean the shed. What do you say?",
+            answer: "Kannst du bitte den Schuppen aufräumen?",
+            english: "Can you please clean the shed?"
+        },
+        {
+            scenario: "You’re telling someone you’re going to the locksmith. What do you say?",
+            answer: "Ich gehe zum Schlosser.",
+            english: "I am going to the locksmith."
+        },
+        {
+            scenario: "You’re asking someone to fix the plumbing. What do you say?",
+            answer: "Kannst du bitte die Wasserleitung reparieren?",
+            english: "Can you please fix the plumbing?"
+        },
+        {
+            scenario: "You’re telling someone you’re going to the electrician. What do you say?",
+            answer: "Ich gehe zum Elektriker.",
+            english: "I am going to the electrician."
+        },
+        {
+            scenario: "You’re asking someone to clean the patio. What do you say?",
+            answer: "Kannst du bitte die Terrasse aufräumen?",
+            english: "Can you please clean the patio?"
+        },
+        {
+            scenario: "You’re telling someone you’re going to the plumber. What do you say?",
+            answer: "Ich gehe zum Klempner.",
+            english: "I am going to the plumber."
+        },
+        {
+            scenario: "You’re asking someone to fix the heating. What do you say?",
+            answer: "Kannst du bitte die Heizung reparieren?",
+            english: "Can you please fix the heating?"
+        },
+        {
+            scenario: "You’re telling someone you’re going to the carpenter. What do you say?",
+            answer: "Ich gehe zum Tischler.",
+            english: "I am going to the carpenter."
+        },
+        {
+            scenario: "You’re asking someone to clean the driveway. What do you say?",
+            answer: "Kannst du bitte die Einfahrt aufräumen?",
+            english: "Can you please clean the driveway?"
+        },
+        {
+            scenario: "You’re telling someone you’re going to the painter. What do you say?",
+            answer: "Ich gehe zum Maler.",
+            english: "I am going to the painter."
+        },
+        {
+            scenario: "You’re asking someone to fix the air conditioning. What do you say?",
+            answer: "Kannst du bitte die Klimaanlage reparieren?",
+            english: "Can you please fix the air conditioning?"
+        },
+        {
+            scenario: "You’re telling someone you’re going to the roofer. What do you say?",
+            answer: "Ich gehe zum Dachdecker.",
+            english: "I am going to the roofer."
+        },
+        {
+            scenario: "You’re asking someone to clean the gutters. What do you say?",
+            answer: "Kannst du bitte die Dachrinnen reinigen?",
+            english: "Can you please clean the gutters?"
+        },
+        {
+            scenario: "You’re telling someone you’re going to the glazier. What do you say?",
+            answer: "Ich gehe zum Glaser.",
+            english: "I am going to the glazier."
+        },
+        {
+            scenario: "You’re asking someone to fix the chimney. What do you say?",
+            answer: "Kannst du bitte den Schornstein reparieren?",
+            english: "Can you please fix the chimney?"
+        },
+        {
+            scenario: "You’re telling someone you’re going to the welder. What do you say?",
+            answer: "Ich gehe zum Schweißer.",
+            english: "I am going to the welder."
+        },
+        {
+            scenario: "You’re asking someone to clean the roof. What do you say?",
+            answer: "Kannst du bitte das Dach reinigen?",
+            english: "Can you please clean the roof?"
         },
         // Continue adding until 100 verb scenarios...
     ],
@@ -205,7 +559,81 @@ const dataList = {
             answer: "Das ist meine Uhr.",
             english: "This is my watch."
         },
-        // Continue adding until 100 noun scenarios...
+        {
+            scenario: "You’re describing your backpack. What do you say?",
+            answer: "Das ist mein Rucksack.",
+            english: "This is my backpack."
+        },
+        {
+            scenario: "You’re asking for a newspaper. What do you say?",
+            answer: "Kann ich eine Zeitung haben?",
+            english: "Can I have a newspaper?"
+        },
+        {
+            scenario: "You’re pointing out a lamp. What do you say?",
+            answer: "Das ist eine Lampe.",
+            english: "This is a lamp."
+        },
+        {
+            scenario: "You’re describing your wallet. What do you say?",
+            answer: "Das ist mein Geldbeutel.",
+            english: "This is my wallet."
+        },
+        {
+            scenario: "You’re asking for a pair of scissors. What do you say?",
+            answer: "Kann ich eine Schere haben?",
+            english: "Can I have a pair of scissors?"
+        },
+        {
+            scenario: "You’re pointing out a window. What do you say?",
+            answer: "Das ist ein Fenster.",
+            english: "This is a window."
+        },
+        {
+            scenario: "You’re describing your keys. What do you say?",
+            answer: "Das sind meine Schlüssel.",
+            english: "These are my keys."
+        },
+        {
+            scenario: "You’re asking for a blanket. What do you say?",
+            answer: "Kann ich eine Decke haben?",
+            english: "Can I have a blanket?"
+        },
+        {
+            scenario: "You’re pointing out a clock. What do you say?",
+            answer: "Das ist eine Uhr.",
+            english: "This is a clock."
+        },
+        {
+            scenario: "You’re describing your sunglasses. What do you say?",
+            answer: "Das ist meine Sonnenbrille.",
+            english: "These are my sunglasses."
+        },
+        {
+            scenario: "You’re asking for a notebook. What do you say?",
+            answer: "Kann ich ein Notizbuch haben?",
+            english: "Can I have a notebook?"
+        },
+        {
+            scenario: "You’re pointing out a mirror. What do you say?",
+            answer: "Das ist ein Spiegel.",
+            english: "This is a mirror."
+        },
+        {
+            scenario: "You’re describing your umbrella. What do you say?",
+            answer: "Das ist mein Regenschirm.",
+            english: "This is my umbrella."
+        },
+        {
+            scenario: "You’re asking for a pair of shoes. What do you say?",
+            answer: "Kann ich ein Paar Schuhe haben?",
+            english: "Can I have a pair of shoes?"
+        },
+        {
+            scenario: "You’re pointing out a painting. What do you say?",
+            answer: "Das ist ein Gemälde.",
+            english: "This is a painting."
+        },
     ],
     sentences: [
         {
@@ -258,7 +686,6 @@ const dataList = {
             answer: "Könnten Sie mir bitte sagen, wie spät es ist?",
             english: "Could you please tell me what time it is?"
         },
-        // Add 90 more sentence scenarios...
         {
             scenario: "You’re asking someone to repeat themselves. What do you say?",
             answer: "Könnten Sie das bitte wiederholen?",
@@ -309,6 +736,80 @@ const dataList = {
             answer: "Ich gehe zum Flughafen.",
             english: "I am going to the airport."
         },
-        // Continue adding until 100 sentence scenarios...
+        {
+            scenario: "You’re asking someone if they speak English. What do you say?",
+            answer: "Sprechen Sie Englisch?",
+            english: "Do you speak English?"
+        },
+        {
+            scenario: "You’re telling someone you’re learning German. What do you say?",
+            answer: "Ich lerne Deutsch.",
+            english: "I am learning German."
+        },
+        {
+            scenario: "You’re asking someone where the restroom is. What do you say?",
+            answer: "Wo ist die Toilette?",
+            english: "Where is the restroom?"
+        },
+        {
+            scenario: "You’re telling someone you’re hungry. What do you say?",
+            answer: "Ich habe Hunger.",
+            english: "I am hungry."
+        },
+        {
+            scenario: "You’re asking someone if they have a recommendation. What do you say?",
+            answer: "Haben Sie eine Empfehlung?",
+            english: "Do you have a recommendation?"
+        },
+        {
+            scenario: "You’re telling someone you’re tired. What do you say?",
+            answer: "Ich bin müde.",
+            english: "I am tired."
+        },
+        {
+            scenario: "You’re asking someone if they want to join you. What do you say?",
+            answer: "Möchtest du mitkommen?",
+            english: "Do you want to join me?"
+        },
+        {
+            scenario: "You’re telling someone you’re excited. What do you say?",
+            answer: "Ich bin aufgeregt.",
+            english: "I am excited."
+        },
+        {
+            scenario: "You’re asking someone if they have change. What do you say?",
+            answer: "Haben Sie Kleingeld?",
+            english: "Do you have change?"
+        },
+        {
+            scenario: "You’re telling someone you’re cold. What do you say?",
+            answer: "Mir ist kalt.",
+            english: "I am cold."
+        },
+        {
+            scenario: "You’re asking someone if they like the food. What do you say?",
+            answer: "Schmeckt dir das Essen?",
+            english: "Do you like the food?"
+        },
+        {
+            scenario: "You’re telling someone you’re happy. What do you say?",
+            answer: "Ich bin glücklich.",
+            english: "I am happy."
+        },
+        {
+            scenario: "You’re asking someone if they’ve been here before. What do you say?",
+            answer: "Warst du schon einmal hier?",
+            english: "Have you been here before?"
+        },
+        {
+            scenario: "You’re telling someone you’re confused. What do you say?",
+            answer: "Ich bin verwirrt.",
+            english: "I am confused."
+        },
+        {
+            scenario: "You’re asking someone if they can take a photo for you. What do you say?",
+            answer: "Könnten Sie ein Foto für mich machen?",
+            english: "Could you take a photo for me?"
+        },
     ]
 };
