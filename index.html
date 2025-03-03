@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>German Flashcard App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Menu Screen -->
+        <div id="menu-screen">
+            <header>
+                <h1>German Flashcard App</h1>
+                <div class="progress">
+                    <span>Streak: <span id="streak">0</span> 🔥</span>
+                    <span>Points: <span id="points">0</span> ⭐</span>
+                </div>
+            </header>
+            <div class="main-content">
+                <div class="select-container">
+                    <select id="topic-select">
+                        <option value="" disabled selected>Select a topic</option>
+                        <option value="verbs">Verbs</option>
+                        <option value="nouns">Nouns</option>
+                        <option value="sentences">R/Sentences</option>
+                    </select>
+                </div>
+                <button id="generate-flashcard-button" class="generate-button">Generate Flashcards</button>
+            </div>
+        </div>
+
+        <!-- Flashcard Screen -->
+        <div id="flashcard-screen">
+            <header>
+                <h1>German Flashcard App</h1>
+                <button id="back-button" class="back-button">Back to Menu</button>
+            </header>
+            <div class="flashcard-scroll-container" id="flashcard-scroll-container">
+                <div class="flashcard-grid" id="flashcard-grid"></div>
+            </div>
+        </div>
+
+        <!-- Flashcard Modal -->
+        <div id="flashcard-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="modal-front">
+                    <p class="modal-question"></p>
+                </div>
+                <div class="modal-back">
+                    <div class="modal-translation-container">
+                        <div class="modal-english-text"></div>
+                        <div class="modal-german-text"></div>
+                    </div>
+                </div>
+                <div class="rating-buttons">
+                    <button id="easy-button" class="rating-button easy">Easy (+2)</button>
+                    <button id="hard-button" class="rating-button hard">Hard (+1)</button>
+                    <button id="difficult-button" class="rating-button difficult">Difficult (0)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

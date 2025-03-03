@@ -1,0 +1,306 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.app-container {
+    max-width: 1200px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Menu Screen */
+#menu-screen {
+    display: block;
+}
+
+#flashcard-screen {
+    display: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #444;
+    letter-spacing: 1px;
+}
+
+.progress span {
+    font-size: 1rem;
+    margin-left: 10px;
+    letter-spacing: 0.5px;
+}
+
+.main-content {
+    text-align: center;
+}
+
+.select-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.select-container select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    font-size: 1rem;
+    background: #fff;
+    color: #333;
+    cursor: pointer;
+    appearance: none;
+    letter-spacing: 0.5px;
+}
+
+.select-container::after {
+    content: '▼';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #667eea;
+}
+
+.generate-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    background: #4caf50;
+    color: #fff;
+    transition: background 0.3s;
+    letter-spacing: 0.5px;
+}
+
+.generate-button:hover {
+    background: #45a049;
+}
+
+/* Flashcard Screen */
+#flashcard-screen {
+    display: none;
+}
+
+/* Flashcard Scroll Container */
+.flashcard-scroll-container {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scrollbar-width: thin;
+    scrollbar-color: #667eea #f1f1f1;
+}
+
+/* Custom Scrollbar */
+.flashcard-scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.flashcard-scroll-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.flashcard-scroll-container::-webkit-scrollbar-thumb {
+    background: #667eea;
+    border-radius: 10px;
+}
+
+.flashcard-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Flashcard Grid */
+.flashcard-grid {
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+}
+
+/* Flashcard Styles */
+.flashcard {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-width: 250px;
+    min-height: 150px;
+    flex-shrink: 0;
+}
+
+.flashcard:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.flashcard p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+    word-break: break-word;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+}
+
+/* Flashcard Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: #666;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    color: #333;
+}
+
+.modal-front, .modal-back {
+    margin: 20px 0;
+}
+
+.modal-translation-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-english-text, .modal-german-text {
+    flex: 1;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+}
+
+.modal-english-text {
+    color: #666;
+    font-style: italic;
+}
+
+.modal-german-text {
+    color: #764ba2;
+    font-weight: bold;
+}
+
+/* Rating Buttons */
+.rating-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.rating-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    letter-spacing: 0.5px;
+}
+
+.rating-button.easy {
+    background: #4caf50;
+    color: #fff;
+}
+
+.rating-button.hard {
+    background: #ff9800;
+    color: #fff;
+}
+
+.rating-button.difficult {
+    background: #f44336;
+    color: #fff;
+}
+
+.rating-button:hover {
+    opacity: 0.9;
+}
+
+/* Back Button */
+.back-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    background: #ff9800;
+    color: #fff;
+    transition: background 0.3s;
+    letter-spacing: 0.5px;
+}
+
+.back-button:hover {
+    background: #e68900;
+}
