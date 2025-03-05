@@ -96,9 +96,9 @@ document.addEventListener('DOMContentLoaded', function () {
             const cleanWord = word.replace(/[^a-zA-ZäöüßÄÖÜ]/g, ""); // Remove punctuation
             const translation = wordTranslations[cleanWord] || word; // Use the dictionary or fallback to the word itself
             translationsHTML += `
-                <div class="word-translation">
-                    <span class="german-word">${word}</span>
-                    <span class="english-word">${translation}</span>
+                <div class="word-pair">
+                    <div class="german-word">${word}</div>
+                    <div class="english-word">${translation}</div>
                 </div>
             `;
         });
