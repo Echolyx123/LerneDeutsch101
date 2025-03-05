@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const menuScreen = document.getElementById('menu-screen');
     const flashcardScreen = document.getElementById('flashcard-screen');
-    const topicSelect = document.getElementById('topic-select');
     const generateButton = document.getElementById('generate-flashcard-button');
     const flashcardGrid = document.getElementById('flashcard-grid');
     const backButton = document.getElementById('back-button');
@@ -25,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const nextStepButton = document.getElementById('next-step-button');
     const stepProgress = document.getElementById('step-progress');
 
-    let selectedTopic = null;
     let currentStreak = 0;
     let totalPoints = 0;
     let currentCardIndex = 0;
@@ -37,22 +35,12 @@ document.addEventListener('DOMContentLoaded', function () {
     menuScreen.style.display = 'block';
     flashcardScreen.style.display = 'none';
 
-    // Handle topic selection
-    topicSelect.addEventListener('change', function () {
-        selectedTopic = topicSelect.value;
-        console.log("Selected topic:", selectedTopic);
-    });
-
     // Handle "Generate Flashcards" button click
     generateButton.addEventListener('click', function () {
-        if (selectedTopic) {
-            console.log("Generating flashcards for topic:", selectedTopic);
-            menuScreen.style.display = 'none';
-            flashcardScreen.style.display = 'block';
-            generateFlashcards(selectedTopic);
-        } else {
-            alert("Please select a topic!");
-        }
+        console.log("Generating flashcards...");
+        menuScreen.style.display = 'none';
+        flashcardScreen.style.display = 'block';
+        generateFlashcards();
     });
 
     // Handle "Back" button click
@@ -64,17 +52,17 @@ document.addEventListener('DOMContentLoaded', function () {
         currentStepIndex = 0; // Reset step index
     });
 
-    // Generate flashcards for the selected topic
-    function generateFlashcards(topic) {
+    // Generate flashcards
+    function generateFlashcards() {
         flashcardGrid.innerHTML = ''; // Clear existing flashcards
 
-        if (dataList[topic]) {
-            currentFlashcardData = dataList[topic];
+        if (dataList) {
+            currentFlashcardData = dataList;
             console.log("Flashcards loaded:", currentFlashcardData); // Debugging log
             showFlashcard(currentCardIndex);
         } else {
-            console.error("Invalid topic selected.");
-            alert("Invalid topic selected. Please try again.");
+            console.error("No flashcard data found.");
+            alert("No flashcard data found. Please try again.");
         }
     }
 
