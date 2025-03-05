@@ -8,28 +8,20 @@ document.addEventListener('DOMContentLoaded', function () {
     const generateButton = document.getElementById('generate-flashcard-button');
     const flashcardGrid = document.getElementById('flashcard-grid');
     const backButton = document.getElementById('back-button');
-    const modal = document.getElementById('flashcard-modal');
-    const closeModal = document.querySelector('.close-modal');
-    const modalQuestion = document.querySelector('.modal-question');
-    const modalEnglishText = document.querySelector('.modal-english-text');
-    const modalGermanText = document.querySelector('.modal-german-text');
-    const easyButton = document.getElementById('easy-button');
-    const hardButton = document.getElementById('hard-button');
-    const difficultButton = document.getElementById('difficult-button');
-    const streakDisplay = document.getElementById('streak');
-    const pointsDisplay = document.getElementById('points');
     const prevCardButton = document.getElementById('prev-card-button');
     const nextCardButton = document.getElementById('next-card-button');
     const toggleTranslationButton = document.getElementById('toggle-translation-button');
     const nextStepButton = document.getElementById('next-step-button');
     const stepProgress = document.getElementById('step-progress');
+    const streakDisplay = document.getElementById('streak');
+    const pointsDisplay = document.getElementById('points');
 
     let currentStreak = 0;
     let totalPoints = 0;
     let currentCardIndex = 0;
     let currentStepIndex = 0;
     let showTranslation = false;
-    let currentFlashcardData = null;
+    let currentFlashcardData = [];
 
     // Show menu screen and hide flashcard screen initially
     menuScreen.style.display = 'block';
@@ -56,10 +48,10 @@ document.addEventListener('DOMContentLoaded', function () {
     function generateFlashcards() {
         flashcardGrid.innerHTML = ''; // Clear existing flashcards
 
-        if (dataList) {
-            currentFlashcardData = dataList;
+        if (dataList && dataList.length > 0) {
+            currentFlashcardData = dataList; // Assign dataList to currentFlashcardData
             console.log("Flashcards loaded:", currentFlashcardData); // Debugging log
-            showFlashcard(currentCardIndex);
+            showFlashcard(currentCardIndex); // Show the first flashcard
         } else {
             console.error("No flashcard data found.");
             alert("No flashcard data found. Please try again.");
@@ -74,6 +66,11 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         const flashcard = currentFlashcardData[cardIndex];
+        if (!flashcard || !flashcard.steps) {
+            console.error("Invalid flashcard data:", flashcard);
+            return;
+        }
+
         console.log("Current flashcard:", flashcard); // Debugging log
         console.log("Current step:", flashcard.steps[currentStepIndex]); // Debugging log
 
@@ -159,53 +156,4 @@ document.addEventListener('DOMContentLoaded', function () {
             flashcard.classList.toggle('show-translation');
         }
     });
-
-    // Open modal with flashcard content
-    function openModal(scenario) {
-        modalQuestion.textContent = scenario.scenario;
-        modalEnglishText.textContent = scenario.english;
-        modalGermanText.textContent = scenario.answer;
-        modal.style.display = 'flex';
-    }
-
-    // Close modal
-    closeModal.addEventListener('click', function () {
-        modal.style.display = 'none';
-    });
-
-    // Close modal when clicking outside
-    window.addEventListener('click', function (event) {
-        if (event.target === modal) {
-            modal.style.display = 'none';
-        }
-    });
-
-    // Handle rating button clicks
-    easyButton.addEventListener('click', function () {
-        updateScore(2);
-        modal.style.display = 'none';
-    });
-
-    hardButton.addEventListener('click', function () {
-        updateScore(1);
-        modal.style.display = 'none';
-    });
-
-    difficultButton.addEventListener('click', function () {
-        updateScore(0);
-        modal.style.display = 'none';
-    });
-
-    // Update score and streak
-    function updateScore(points) {
-        totalPoints += points;
-        pointsDisplay.textContent = totalPoints;
-
-        if (points > 0) {
-            currentStreak++;
-        } else {
-            currentStreak = 0;
-        }
-        streakDisplay.textContent = currentStreak;
-    }
 });
