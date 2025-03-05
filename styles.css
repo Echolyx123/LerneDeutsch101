@@ -13,13 +13,16 @@ body {
 }
 
 .app-container {
-    max-width: 1200px;
-    width: 100%;
+    max-width: 1000px; /* Wider layout */
+    width: 95%; /* Adjust width for responsiveness */
     background: rgba(255, 255, 255, 0.95);
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    padding: 20px;
+    padding: 30px; /* Increased padding */
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
 }
 
 /* Menu Screen */
@@ -29,24 +32,27 @@ body {
 
 #flashcard-screen {
     display: none;
+    width: 100%; /* Ensure it takes full width */
+    text-align: center; /* Center text content */
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px; /* Increased margin */
+    width: 100%; /* Ensure header takes full width */
 }
 
 header h1 {
     margin: 0;
-    font-size: 2rem;
+    font-size: 2.5rem; /* Larger font size */
     color: #444;
     letter-spacing: 1px;
 }
 
 .progress span {
-    font-size: 1rem;
+    font-size: 1.2rem; /* Larger font size */
     margin-left: 10px;
     letter-spacing: 0.5px;
 }
@@ -58,15 +64,15 @@ header h1 {
 .select-container {
     position: relative;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 30px; /* Increased margin */
 }
 
 .select-container select {
     width: 100%;
-    padding: 10px;
+    padding: 15px; /* Increased padding */
     border: 2px solid #ddd;
     border-radius: 15px;
-    font-size: 1rem;
+    font-size: 1.2rem; /* Larger font size */
     background: #fff;
     color: #333;
     cursor: pointer;
@@ -78,17 +84,17 @@ header h1 {
     content: '▼';
     position: absolute;
     top: 50%;
-    right: 15px;
+    right: 20px; /* Adjusted position */
     transform: translateY(-50%);
     pointer-events: none;
     color: #667eea;
 }
 
 .generate-button {
-    padding: 10px 20px;
+    padding: 15px 30px; /* Increased padding */
     border: none;
     border-radius: 25px;
-    font-size: 1rem;
+    font-size: 1.2rem; /* Larger font size */
     cursor: pointer;
     background: #4caf50;
     color: #fff;
@@ -100,76 +106,155 @@ header h1 {
     background: #45a049;
 }
 
-/* Flashcard Screen */
-#flashcard-screen {
-    display: none;
-}
-
-/* Flashcard Scroll Container */
-.flashcard-scroll-container {
-    width: 100%;
-    overflow-x: auto;
-    padding-bottom: 20px;
-    scrollbar-width: thin;
-    scrollbar-color: #667eea #f1f1f1;
-}
-
-/* Custom Scrollbar */
-.flashcard-scroll-container::-webkit-scrollbar {
-    height: 8px;
-}
-
-.flashcard-scroll-container::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
-}
-
-.flashcard-scroll-container::-webkit-scrollbar-thumb {
-    background: #667eea;
-    border-radius: 10px;
-}
-
-.flashcard-scroll-container::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
-
-/* Flashcard Grid */
-.flashcard-grid {
+/* Flashcard Navigation Container */
+.flashcard-navigation-container {
     display: flex;
-    gap: 15px;
-    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; /* Increased gap */
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
-/* Flashcard Styles */
-.flashcard {
-    background: #fff;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+/* Flashcard View */
+.flashcard-view {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
     position: relative;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
+    height: 400px; /* Increased height */
+    width: 100%; /* Ensure it takes full width */
+}
+
+/* Flashcard Styling */
+.flashcard {
+    width: 350px;
+    height: 250px;
+    perspective: 1000px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.flashcard-front,
+.flashcard-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    min-width: 250px;
-    min-height: 150px;
-    flex-shrink: 0;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    transition: transform 0.6s;
 }
 
-.flashcard:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    transform: translateY(-5px);
+.flashcard-back {
+    transform: rotateY(180deg);
+    background: #f9f9f9;
 }
 
-.flashcard p {
-    margin: 0;
-    font-size: 1rem;
-    color: #333;
-    word-break: break-word;
-    line-height: 1.8;
-    letter-spacing: 0.5px;
+.flashcard.show-translation .flashcard-front {
+    transform: rotateY(180deg);
+}
+
+.flashcard.show-translation .flashcard-back {
+    transform: rotateY(0deg);
+}
+
+/* Word Translations Styling */
+.word-translation {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.german-word {
+    font-weight: bold;
+    color: #764ba2;
+}
+
+.english-word {
+    color: #666;
+    font-style: italic;
+}
+
+/* Navigation Arrows */
+.nav-arrow {
+    background: #667eea;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px; /* Larger size */
+    height: 50px; /* Larger size */
+    font-size: 2rem; /* Larger font size */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.nav-arrow:hover {
+    background: #555;
+}
+
+.nav-arrow:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* Step Navigation */
+.step-navigation {
+    margin-top: 30px; /* Increased margin */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Increased gap */
+}
+
+.step-button {
+    padding: 15px 30px; /* Increased padding */
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2rem; /* Larger font size */
+    cursor: pointer;
+    background: #667eea;
+    color: #fff;
+    transition: background 0.3s;
+}
+
+.step-button:hover {
+    background: #555;
+}
+
+#step-progress {
+    font-size: 1.1rem; /* Larger font size */
+    color: #764ba2;
+    font-weight: bold;
+}
+
+/* Translation Toggle Button */
+.toggle-translation-button {
+    margin-top: 30px; /* Increased margin */
+    padding: 15px 30px; /* Increased padding */
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2rem; /* Larger font size */
+    cursor: pointer;
+    background: #764ba2;
+    color: #fff;
+    transition: background 0.3s;
+}
+
+.toggle-translation-button:hover {
+    background: #5a3780;
 }
 
 /* Flashcard Modal */
@@ -189,9 +274,9 @@ header h1 {
 .modal-content {
     background: #fff;
     border-radius: 15px;
-    padding: 20px;
+    padding: 30px; /* Increased padding */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    max-width: 500px;
+    max-width: 600px; /* Larger width */
     width: 90%;
     text-align: center;
     position: relative;
@@ -211,9 +296,9 @@ header h1 {
 
 .close-modal {
     position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 1.5rem;
+    top: 15px; /* Adjusted position */
+    right: 20px; /* Adjusted position */
+    font-size: 2rem; /* Larger font size */
     color: #666;
     cursor: pointer;
 }
@@ -223,12 +308,12 @@ header h1 {
 }
 
 .modal-front, .modal-back {
-    margin: 20px 0;
+    margin: 30px 0; /* Increased margin */
 }
 
 .modal-translation-container {
     display: flex;
-    gap: 20px;
+    gap: 30px; /* Increased gap */
     align-items: center;
     justify-content: center;
 }
@@ -236,7 +321,7 @@ header h1 {
 .modal-english-text, .modal-german-text {
     flex: 1;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.5rem; /* Larger font size */
     line-height: 1.8;
     letter-spacing: 0.5px;
 }
@@ -254,16 +339,16 @@ header h1 {
 /* Rating Buttons */
 .rating-buttons {
     display: flex;
-    gap: 10px;
+    gap: 20px; /* Increased gap */
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 30px; /* Increased margin */
 }
 
 .rating-button {
-    padding: 10px 20px;
+    padding: 15px 30px; /* Increased padding */
     border: none;
     border-radius: 25px;
-    font-size: 1rem;
+    font-size: 1.2rem; /* Larger font size */
     cursor: pointer;
     transition: background 0.3s;
     letter-spacing: 0.5px;
@@ -290,10 +375,10 @@ header h1 {
 
 /* Back Button */
 .back-button {
-    padding: 10px 20px;
+    padding: 15px 30px; /* Increased padding */
     border: none;
     border-radius: 25px;
-    font-size: 1rem;
+    font-size: 1.2rem; /* Larger font size */
     cursor: pointer;
     background: #ff9800;
     color: #fff;
