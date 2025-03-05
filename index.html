@@ -19,14 +19,16 @@
             </header>
             <div class="main-content">
                 <div class="select-container">
-                    <select id="topic-select">
+                    <select id="topic-select" aria-label="Select a topic">
                         <option value="" disabled selected>Select a topic</option>
                         <option value="verbs">Verbs</option>
                         <option value="nouns">Nouns</option>
-                        <option value="sentences">R/Sentences</option>
+                        <option value="sentences">Sentences</option>
                     </select>
                 </div>
-                <button id="generate-flashcard-button" class="generate-button">Generate Flashcards</button>
+                <button id="generate-flashcard-button" class="generate-button" aria-label="Generate Flashcards">
+                    Generate Flashcards
+                </button>
             </div>
         </div>
 
@@ -34,37 +36,31 @@
         <div id="flashcard-screen">
             <header>
                 <h1>German Flashcard App</h1>
-                <button id="back-button" class="back-button">Back to Menu</button>
+                <button id="back-button" class="back-button" aria-label="Back to Menu">
+                    Back to Menu
+                </button>
             </header>
-            <div class="flashcard-scroll-container" id="flashcard-scroll-container">
-                <div class="flashcard-grid" id="flashcard-grid"></div>
+            <div class="flashcard-navigation-container">
+                <button id="prev-card-button" class="nav-arrow" aria-label="Previous Card">&#10094;</button>
+                <div class="flashcard-view" id="flashcard-view">
+                    <div class="flashcard-grid" id="flashcard-grid"></div>
+                </div>
+                <button id="next-card-button" class="nav-arrow" aria-label="Next Card">&#10095;</button>
             </div>
-        </div>
-
-        <!-- Flashcard Modal -->
-        <div id="flashcard-modal" class="modal">
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <div class="modal-front">
-                    <p class="modal-question"></p>
-                </div>
-                <div class="modal-back">
-                    <div class="modal-translation-container">
-                        <div class="modal-english-text"></div>
-                        <div class="modal-german-text"></div>
-                    </div>
-                </div>
-                <div class="rating-buttons">
-                    <button id="easy-button" class="rating-button easy">Easy (+2)</button>
-                    <button id="hard-button" class="rating-button hard">Hard (+1)</button>
-                    <button id="difficult-button" class="rating-button difficult">Difficult (0)</button>
-                </div>
+            <div class="step-navigation">
+                <button id="next-step-button" class="step-button" aria-label="Next Step">
+                    Next Step
+                </button>
+                <span id="step-progress" aria-live="polite"></span>
             </div>
+            <button id="toggle-translation-button" class="toggle-translation-button" aria-label="Show Translation">
+                Show Translation
+            </button>
         </div>
     </div>
 
     <!-- Scripts -->
-    <script src="data.js"></script>
-    <script src="script.js"></script>
+    <script src="data.js" type="module"></script>
+    <script src="script.js" type="module"></script>
 </body>
 </html>
