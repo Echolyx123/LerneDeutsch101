@@ -1,4 +1,4 @@
-import { dataList, wordTranslations } from './data.js';
+import { wordTranslations, scenarios } from './data.js';
 
 document.addEventListener('DOMContentLoaded', function () {
     console.log("DOM fully loaded and parsed");
@@ -48,8 +48,8 @@ document.addEventListener('DOMContentLoaded', function () {
     function generateFlashcards() {
         flashcardGrid.innerHTML = ''; // Clear existing flashcards
 
-        if (dataList && dataList.length > 0) {
-            currentFlashcardData = dataList; // Assign dataList to currentFlashcardData
+        if (scenarios && scenarios.length > 0) {
+            currentFlashcardData = scenarios; // Assign scenarios to currentFlashcardData
             console.log("Flashcards loaded:", currentFlashcardData); // Debugging log
             showFlashcard(currentCardIndex); // Show the first flashcard
         } else {
