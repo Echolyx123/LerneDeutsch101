@@ -1810,15 +1810,13 @@ const scenarios = [
     ];
 
 // Generate dataList dynamically
-const dataList = {
-    verbs: scenarios.map((scenario) => ({
-        ...scenario,
-        wordTranslations: scenario.steps.map((step) => ({
-            german: step,
-            english: wordTranslations[step.replace(/[^a-zA-ZäöüßÄÖÜ]/g, "")] || step,
-        })),
+const dataList = scenarios.map((scenario) => ({
+    ...scenario,
+    wordTranslations: scenario.steps.map((step) => ({
+        german: step,
+        english: wordTranslations[step.replace(/[^a-zA-ZäöüßÄÖÜ]/g, "")] || step,
     })),
-};
+}));
 
 // Export dataList (if using modules)
 export { dataList };
