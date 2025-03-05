@@ -88,10 +88,11 @@ document.addEventListener('DOMContentLoaded', function () {
         updateStepProgress();
     }
 
+    // Generate individual word translations for the back of the card
     function generateWordTranslations(germanSentence) {
         const germanWords = germanSentence.split(' ');
         let translationsHTML = '';
-    
+
         germanWords.forEach((word) => {
             const cleanWord = word.replace(/[^a-zA-ZäöüßÄÖÜ]/g, ""); // Remove punctuation
             const translation = wordTranslations[cleanWord] || word; // Use the dictionary or fallback to the word itself
@@ -102,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             `;
         });
-    
+
         return translationsHTML;
     }
 
