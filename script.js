@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Generate flashcards
     function generateFlashcards() {
-        flashcardGrid.innerHTML = ''; // Clear existing flashcards
+        console.log("Scenarios:", scenarios);flashcardGrid.innerHTML = ''; // Clear existing flashcards
 
         if (scenarios && scenarios.length > 0) {
             currentFlashcardData = scenarios; // Assign scenarios to currentFlashcardData
