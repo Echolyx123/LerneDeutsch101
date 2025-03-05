@@ -1819,5 +1819,5 @@ const dataList = scenarios.map((scenario) => ({
     })),
 }));
 
-// Export dataList and wordTranslations
-export { dataList, wordTranslations };
+// Export wordTranslations and scenarios
+export { wordTranslations, scenarios };
