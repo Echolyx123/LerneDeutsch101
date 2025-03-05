@@ -136,8 +136,7 @@ const wordTranslations = {
     Schweißer: "welder",
 };
 
-const scenarios = {
-    verbs: [
+const scenarios = [
         {
             scenario: "You’re at a café and want to order a coffee. What do you say?",
             steps: [
@@ -1093,9 +1092,7 @@ const scenarios = {
             ],
             answer: "Kannst du bitte das Dach reinigen?",
             english: "Can you please clean the roof?"
-        }
-    ],
-    nouns: [
+        },
         {
             scenario: "You’re at a grocery store and need to buy bread. What do you ask for?",
             steps: [
@@ -1451,9 +1448,7 @@ const scenarios = {
             ],
             answer: "Das ist ein Gemälde.",
             english: "This is a painting."
-        }
-    ],
-    sentences: [
+        },
         {
             scenario: "You’re introducing yourself to a new colleague. What do you say?",
             steps: [
@@ -1811,9 +1806,8 @@ const scenarios = {
             ],
             answer: "Könnten Sie ein Foto für mich machen?",
             english: "Could you take a photo for me?"
-        }
-    ]
-};
+        },
+    ];
 
 // Generate dataList dynamically
 const dataList = {
