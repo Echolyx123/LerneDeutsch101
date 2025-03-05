@@ -136,8 +136,9 @@ const wordTranslations = {
     Schweißer: "welder",
 };
 
+// Ensure scenarios is always an array
 const scenarios = [
-        {
+    {
             scenario: "You’re at a café and want to order a coffee. What do you say?",
             steps: [
                 "Ich", // Step 1
@@ -1818,5 +1819,5 @@ const dataList = scenarios.map((scenario) => ({
     })),
 }));
 
-// Export dataList (if using modules)
-export { dataList };
+// Export dataList and wordTranslations
+export { dataList, wordTranslations };
