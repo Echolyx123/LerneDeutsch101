@@ -1,4 +1,4 @@
-import { dataList } from './data.js';
+import { dataList, wordTranslations } from './data.js';
 
 document.addEventListener('DOMContentLoaded', function () {
     console.log("DOM fully loaded and parsed");
