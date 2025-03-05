@@ -177,6 +177,14 @@ header h1 {
     word-spacing: 2px; /* Added word spacing */
 }
 
+.word-pair {
+    display: flex;
+    justify-content: space-between; /* Align German and English words on opposite sides */
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px solid #eee; /* Add a subtle separator */
+}
+
 .german-word {
     font-weight: bold;
     color: #764ba2;
